@@ -8,7 +8,8 @@ Checks:
   3. Every <vertical>/agents/*.md has valid YAML frontmatter with name + description.
   4. Every system.file, skills[].path, callable_agents[].manifest in agent.yaml
      and subagent yamls resolves to an existing file/dir.
-  5. Every managed-agents/<slug>/ has agent.yaml, README.md, steering-examples.json.
+  5. Claude and Codex marketplace source paths resolve to matching plugin manifests.
+  6. Every managed-agents/<slug>/ has agent.yaml, README.md, steering-examples.json.
 
 Exit 0 if clean, 1 otherwise. Requires: pyyaml.
 """
@@ -49,7 +50,9 @@ for yml in sorted(MANAGED.rglob("*.yaml")):
 # --- 2. JSON parse ----------------------------------------------------------
 json_globs = [
     ".claude-plugin/marketplace.json",
+    ".agents/plugins/marketplace.json",
     "plugins/**/.claude-plugin/plugin.json",
+    "plugins/**/.codex-plugin/plugin.json",
     "managed-agent-cookbooks/*/steering-examples.json",
 ]
 for pat in json_globs:
@@ -143,11 +146,31 @@ for md in sorted(PLUGINS.glob("agent-plugins/*/agents/*.md")):
             )
 
 # --- 4c. marketplace source paths resolve ----------------------------------
-mp = ROOT / ".claude-plugin" / "marketplace.json"
-for p in json.loads(mp.read_text()).get("plugins", []):
-    src = (ROOT / p["source"]).resolve()
-    if not (src / ".claude-plugin" / "plugin.json").is_file():
-        err(f"marketplace: {p['name']} source -> {p['source']} (no plugin.json)")
+def marketplace_source(entry: dict) -> str | None:
+    source = entry.get("source")
+    if isinstance(source, str):
+        return source
+    if isinstance(source, dict):
+        path = source.get("path")
+        if isinstance(path, str):
+            return path
+    return None
+
+
+marketplaces = [
+    (ROOT / ".claude-plugin" / "marketplace.json", ".claude-plugin"),
+    (ROOT / ".agents" / "plugins" / "marketplace.json", ".codex-plugin"),
+]
+for mp, manifest_dir in marketplaces:
+    data = json.loads(mp.read_text())
+    for p in data.get("plugins", []):
+        source = marketplace_source(p)
+        if not source:
+            err(f"marketplace: {rel(mp)}: {p.get('name', '<unnamed>')} has no source path")
+            continue
+        src = (ROOT / source).resolve()
+        if not (src / manifest_dir / "plugin.json").is_file():
+            err(f"marketplace: {rel(mp)}: {p['name']} source -> {source} (no {manifest_dir}/plugin.json)")
 
 # --- 5. required files per managed-agent -----------------------------------
 for d in sorted(MANAGED.iterdir()):

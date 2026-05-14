@@ -18,6 +18,25 @@ This repository keeps the upstream financial-services skills, commands, hooks, a
 
 Use this repository as a Codex plugin marketplace/source. Install the specific plugins you need from the catalog, starting with `financial-analysis` for shared modeling and data-connector declarations.
 
+From a local checkout, register this repository with Codex and enable the shared core plugin:
+
+```bash
+python3 scripts/register-local-marketplace.py
+```
+
+The script updates `~/.codex/config.toml` idempotently with:
+
+```toml
+[plugins."financial-analysis@financial-services-codex"]
+enabled = true
+
+[marketplaces.financial-services-codex]
+source_type = "local"
+source = "/path/to/financial-services-codex"
+```
+
+Restart Codex after registering the marketplace so the newly enabled plugin is loaded. Other plugins in this marketplace can then be enabled from the catalog as needed.
+
 Recommended first installs:
 
 - `financial-analysis`: DCF, comps, LBO, 3-statement models, Excel audit, deck QC, and shared MCP connector declarations.
