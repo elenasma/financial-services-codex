@@ -1,0 +1,39 @@
+{
+  "name": "market-researcher",
+  "version": "0.1.0",
+  "description": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "finance",
+    "financial-services",
+    "market",
+    "researcher"
+  ],
+  "interface": {
+    "displayName": "Market Researcher",
+    "shortDescription": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist",
+    "longDescription": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Use Market Researcher"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/"
+}

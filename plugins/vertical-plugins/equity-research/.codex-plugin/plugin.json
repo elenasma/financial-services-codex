@@ -1,0 +1,42 @@
+{
+  "name": "equity-research",
+  "version": "0.1.0",
+  "description": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "equity",
+    "finance",
+    "financial-services",
+    "research"
+  ],
+  "interface": {
+    "displayName": "Equity Research",
+    "shortDescription": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows",
+    "longDescription": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Analyze this earnings release",
+      "Draft an initiation note",
+      "Update this model"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

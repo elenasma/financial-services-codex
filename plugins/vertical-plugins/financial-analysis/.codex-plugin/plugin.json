@@ -1,0 +1,42 @@
+{
+  "name": "financial-analysis",
+  "version": "0.1.0",
+  "description": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "finance",
+    "financial",
+    "financial-services"
+  ],
+  "interface": {
+    "displayName": "Financial Analysis",
+    "shortDescription": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC",
+    "longDescription": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Build a DCF model",
+      "Run comparable company analysis",
+      "Audit this Excel model"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

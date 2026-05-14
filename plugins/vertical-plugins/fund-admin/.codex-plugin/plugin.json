@@ -1,0 +1,41 @@
+{
+  "name": "fund-admin",
+  "version": "0.1.0",
+  "description": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "admin",
+    "analysis",
+    "finance",
+    "financial-services",
+    "fund"
+  ],
+  "interface": {
+    "displayName": "Fund Admin",
+    "shortDescription": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commenta",
+    "longDescription": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Trace this GL break",
+      "Prepare variance commentary",
+      "Tie out NAV"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "investment-banking",
+  "version": "0.2.0",
+  "description": "Investment banking productivity tools: client and market insights, deck creation, financial analysis, and transaction management",
+  "author": {
+    "name": "Anthropic; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "banking",
+    "finance",
+    "financial-services",
+    "investment"
+  ],
+  "interface": {
+    "displayName": "Investment Banking",
+    "shortDescription": "Investment banking productivity tools: client and market insights, deck creation, financial analysis, and transaction ma",
+    "longDescription": "Investment banking productivity tools: client and market insights, deck creation, financial analysis, and transaction management Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Draft a pitch deck",
+      "Build a buyer list",
+      "Create a CIM outline"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

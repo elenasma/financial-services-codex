@@ -1,0 +1,43 @@
+{
+  "name": "private-equity",
+  "version": "0.1.0",
+  "description": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "equity",
+    "finance",
+    "financial-services",
+    "private"
+  ],
+  "interface": {
+    "displayName": "Private Equity",
+    "shortDescription": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach",
+    "longDescription": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Screen this deal",
+      "Draft an IC memo",
+      "Create a diligence checklist"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

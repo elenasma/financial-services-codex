@@ -1,0 +1,39 @@
+{
+  "name": "pitch-agent",
+  "version": "0.1.0",
+  "description": "Comps, precedents, LBO to a branded pitch deck, end to end",
+  "author": {
+    "name": "Anthropic FSI; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "analysis",
+    "finance",
+    "financial-services",
+    "pitch"
+  ],
+  "interface": {
+    "displayName": "Pitch Agent",
+    "shortDescription": "Comps, precedents, LBO to a branded pitch deck, end to end",
+    "longDescription": "Comps, precedents, LBO to a branded pitch deck, end to end Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Use Pitch Agent"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/"
+}

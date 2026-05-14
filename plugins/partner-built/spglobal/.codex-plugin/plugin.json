@@ -1,0 +1,40 @@
+{
+  "name": "sp-global",
+  "version": "1.0.0",
+  "description": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries",
+  "author": {
+    "name": "Kensho Technologies; Codex adaptation by Elena",
+    "url": "https://github.com/anthropics/financial-services"
+  },
+  "homepage": "https://github.com/anthropics/financial-services",
+  "repository": "https://github.com/elenasma/financial-services-codex",
+  "license": "MIT",
+  "keywords": [
+    "analysis",
+    "finance",
+    "financial-services",
+    "global",
+    "sp"
+  ],
+  "interface": {
+    "displayName": "Sp GLobal",
+    "shortDescription": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summar",
+    "longDescription": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries Adapted from Anthropic financial-services plugin assets for Codex. External data connectors may require separate MCP setup and provider credentials.",
+    "developerName": "Anthropic FSI / Elena",
+    "category": "Finance",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/anthropics/financial-services",
+    "privacyPolicyURL": "https://www.anthropic.com/legal/privacy",
+    "termsOfServiceURL": "https://www.anthropic.com/legal/consumer-terms",
+    "defaultPrompt": [
+      "Use Sp GLobal"
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": []
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
